@@ -10,7 +10,7 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 //Routes
-app.use("/", (req, res) => res.redirect("/api/players"));
+app.get("/", (req, res) => res.redirect("/api/players"));
 app.use("/api/players", router());
 
 // Server Initialize
